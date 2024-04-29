@@ -1,8 +1,6 @@
 import React from 'react'
 import Header from '../Layout/Header'
 import Footer from '../Layout/Footer'
-import Header2 from '../Layout/Header2'
-
 function Home() {
     return (
         <div>
@@ -202,9 +200,6 @@ function Home() {
                 {/* tp-offcanvus-area-end */}
                 {/* header area start */}
                 <Header/>
-                {/* header area end */}
-                {/* header area start */}
-                <Header2/>
                 {/* header area end */}
                 <div id="smooth-wrapper">
                     <div id="smooth-content">

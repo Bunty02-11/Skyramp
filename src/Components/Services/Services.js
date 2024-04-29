@@ -1,7 +1,7 @@
 import React from 'react'
 import Footer from '../Layout/Footer'
 import Header from '../Layout/Header'
-import Header2 from '../Layout/Header2'
+
 
 function Services() {
     return (
@@ -234,7 +234,6 @@ function Services() {
                                     </div>
                                 </div>
                             </div>
-                            <Header2/>
                             {/* breadcrumb area end */}
                             {/* service area start */}
                             <div className="tp-service-2-area pt-140 pb-45">

@@ -1,23 +1,12 @@
 import React from 'react'
 import Header from '../Layout/Header'
 import Footer from '../Layout/Footer'
-import Header2 from '../Layout/Header2'
+
 
 function Contact() {
     return (
         <div>
             <>
-                {/* <div id="loading">
-                    <div id="loading-center">
-                        <div id="loading-center-absolute">
-                            <div className="object" id="object_four" />
-                            <div className="object" id="object_three" />
-                            <div className="object" id="object_two" />
-                            <div className="object" id="object_one" />
-                        </div>
-                    </div>
-                </div> */}
-                {/* pre loader area end */}
                 {/* back to top start */}
                 <div className="back-to-top-wrapper">
                     <button id="back_to_top" type="button" className="back-to-top-btn">
@@ -154,22 +143,22 @@ function Contact() {
                                         href="https://www.google.com/maps/@23.8223586,90.3661283,15z"
                                         target="_blank"
                                     >
-                                        Melbone st, Australia, Ny 12099
+                                       1st Floor, PINNACLE BUSINESS PARK, Mahakali caves, Andheri East, Mumbai-400093
                                     </a>
                                 </li>
                                 <li>
                                     <i className="fas fa-envelope" />
-                                    <a href="mailto:solaredge@gmail.com">themepure@gmail.com</a>
+                                    <a href="mailto:solaredge@gmail.com">bholeinteriors@gmail.com</a>
                                 </li>
                                 <li>
                                     <i className="fal fa-phone-alt" />
-                                    <a href="tel:+48555223224">+48 555 223 224</a>
+                                    <a href="tel:+48555223224">9222499458 </a>
                                 </li>
                             </ul>
                         </div>
                         <div className="tpoffcanvas__input">
                             <div className="tpoffcanvas__input-title">
-                                <h4>Get UPdate</h4>
+                                <h4>Get Update</h4>
                             </div>
                             <form action="#">
                                 <div className="p-relative">
@@ -234,7 +223,6 @@ function Contact() {
                                     </div>
                                 </div>
                             </div>
-                            <Header2/>
                             {/* breadcrumb area end */}
                             {/* form area start */}
                             <div className="tp-form-area pt-145 pb-150">
@@ -338,8 +326,8 @@ function Contact() {
                                                                         href="https://www.google.com/maps/place/Cumberland+House,+SK,+Canada/@53.6729773,-103.7836571,8z/data=!4m15!1m8!3m7!1s0x4b0d03d337cc6ad9:0x9968b72aa2438fa5!2sCanada!3b1!8m2!3d56.130366!4d-106.346771!16zL20vMGQwNjBn!3m5!1s0x52f917b0cc93e6c1:0x44da1470d37ba724!8m2!3d53.958266!4d-102.267444!16zL20vMDZteWx5?entry=ttu"
                                                                         target="_blank"
                                                                     >
-                                                                        Dhaka 102, utl 1216, road 45 house shantighar
-                                                                        rahuta, 1213
+                                                                        1st Floor, PINNACLE BUSINESS PARK, Mahakali caves,
+                                                                        Andheri East, Mumbai-400093
                                                                     </a>
                                                                 </div>
                                                             </div>
@@ -364,8 +352,8 @@ function Contact() {
                                                                 </div>
                                                                 <div className="tp-contact-content">
                                                                     <h6>Email Address</h6>
-                                                                    <a href="mailto:ijmnhhasan000@yourmail.com">
-                                                                        ijmnhhasan000@yourmail.com
+                                                                    <a>
+                                                                    bholeinteriors@gmail.com
                                                                     </a>
                                                                 </div>
                                                             </div>
@@ -390,7 +378,7 @@ function Contact() {
                                                                 </div>
                                                                 <div className="tp-contact-content">
                                                                     <h6>Phone number</h6>
-                                                                    <a href="tel:0000000000000">0000-0000-00-000</a>
+                                                                    <a>+91 9222499458</a>
                                                                 </div>
                                                             </div>
                                                         </li>
@@ -403,7 +391,7 @@ function Contact() {
                                         <div className="col-12">
                                             <div className="tp-map-box">
                                                 <iframe
-                                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d146513.05509247648!2d73.19133525789097!3d54.98596156928781!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43aafde2f601090b%3A0x5eefc33861a69b1a!2z4KaT4Kau4Ka44KeN4KaVLCBPbXNrIE9ibGFzdCwg4Kaw4Ka-4Ka24Ka_4Kav4Ka84Ka-!5e0!3m2!1sbn!2sbd!4v1689181288902!5m2!1sbn!2sbd"
+                                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.721237952822!2d72.86145047497857!3d19.11988138209373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c825662c7fc5%3A0xad3d66ac3ede302c!2sPinnacle%20Business%20Park!5e0!3m2!1sen!2sin!4v1714372663386!5m2!1sen!2sin"
                                                     width={600}
                                                     height={450}
                                                     style={{ border: 0 }}
