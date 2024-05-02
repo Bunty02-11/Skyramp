@@ -22,10 +22,10 @@ function Home() {
                 {/* header area start */}
                 <Header />
                 {/* header area end */}
+                {/* slider area start */}
                 <div id="smooth-wrapper">
                     <div id="smooth-content">
                         <main>
-                            {/* slider area start */}
                             <div className="tp-slider-3-area">
                                 <div className="tp-slider-3-wrapper p-relative">
                                     <div className="tp-slider-dots" />
@@ -998,8 +998,8 @@ function Home() {
                                     </div>
                                 </div>
                             </div>
-                            {/* blog area end */}
                         </main>
+                        {/* blog area end */}
                         <Footer />
                     </div>
                 </div>
