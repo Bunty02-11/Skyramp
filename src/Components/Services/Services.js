@@ -1,205 +1,25 @@
 import React from 'react'
 import Footer from '../Layout/Footer'
 import Header from '../Layout/Header'
+import { useNavigate } from 'react-router-dom';
+import Topbutton from '../Topbutton/Topbutton';
 
 
 function Services() {
+
+    const navigate = useNavigate();
+
+    const reloadPage = () => {
+        window.location.reload(0,0);
+    };
+
+
     return (
         <div>
             <>
-                {/* <div id="loading">
-    <div id="loading-center">
-      <div id="loading-center-absolute">
-        <div className="object" id="object_four" />
-        <div className="object" id="object_three" />
-        <div className="object" id="object_two" />
-        <div className="object" id="object_one" />
-      </div>
-    </div>
-  </div> */}
-                {/* pre loader area end */}
                 {/* back to top start */}
-                <div className="back-to-top-wrapper">
-                    <button id="back_to_top" type="button" className="back-to-top-btn">
-                        <svg
-                            width={12}
-                            height={7}
-                            viewBox="0 0 12 7"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                d="M11 6L6 1L1 6"
-                                stroke="currentColor"
-                                strokeWidth="1.5"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                            />
-                        </svg>
-                    </button>
-                </div>
+                <Topbutton/>
                 {/* back to top end */}
-                {/* search popup start */}
-                <div className="search__popup d-none">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-xxl-12">
-                                <div className="search__wrapper">
-                                    <div className="search__top d-flex justify-content-between align-items-center">
-                                        <div className="search__logo">
-                                            <a href="index.html">
-                                                <img src="assets/img/logo/logo-white.png" alt="" />
-                                            </a>
-                                        </div>
-                                        <div className="search__close">
-                                            <button
-                                                type="button"
-                                                className="search__close-btn search-close-btn"
-                                            >
-                                                <svg
-                                                    width={18}
-                                                    height={18}
-                                                    viewBox="0 0 18 18"
-                                                    fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                >
-                                                    <path
-                                                        d="M17 1L1 17"
-                                                        stroke="currentColor"
-                                                        strokeWidth="1.5"
-                                                        strokeLinecap="round"
-                                                        strokeLinejoin="round"
-                                                    />
-                                                    <path
-                                                        d="M1 1L17 17"
-                                                        stroke="currentColor"
-                                                        strokeWidth="1.5"
-                                                        strokeLinecap="round"
-                                                        strokeLinejoin="round"
-                                                    />
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div className="search__form">
-                                        <form action="#">
-                                            <div className="search__input">
-                                                <input
-                                                    className="search-input-field"
-                                                    type="text"
-                                                    placeholder="Type here to search..."
-                                                />
-                                                <span className="search-focus-border" />
-                                                <button type="submit">
-                                                    <svg
-                                                        width={20}
-                                                        height={20}
-                                                        viewBox="0 0 20 20"
-                                                        fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                    >
-                                                        <path
-                                                            d="M9.55 18.1C14.272 18.1 18.1 14.272 18.1 9.55C18.1 4.82797 14.272 1 9.55 1C4.82797 1 1 4.82797 1 9.55C1 14.272 4.82797 18.1 9.55 18.1Z"
-                                                            stroke="currentColor"
-                                                            strokeWidth="1.5"
-                                                            strokeLinecap="round"
-                                                            strokeLinejoin="round"
-                                                        />
-                                                        <path
-                                                            d="M19.0002 19.0002L17.2002 17.2002"
-                                                            stroke="currentColor"
-                                                            strokeWidth="1.5"
-                                                            strokeLinecap="round"
-                                                            strokeLinejoin="round"
-                                                        />
-                                                    </svg>
-                                                </button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {/* search popup end */}
-                {/* tp-offcanvus-area-start */}
-                <div className="tpoffcanvas-area">
-                    <div className="tpoffcanvas">
-                        <div className="tpoffcanvas__close-btn">
-                            <button className="close-btn">
-                                <i className="fal fa-times" />
-                            </button>
-                        </div>
-                        <div className="tpoffcanvas__logo">
-                            <a href="index.html">
-                                <img src="assets/img/logo/logo-white.png" alt="" />
-                            </a>
-                        </div>
-                        <div className="tpoffcanvas__title">
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
-                                incidunt eaque ab cumque, porro maxime autem sed.
-                            </p>
-                        </div>
-                        <div className="tp-main-menu-mobile d-xl-none" />
-                        <div className="tpoffcanvas__contact-info">
-                            <div className="tpoffcanvas__contact-title">
-                                <h5>Contact us</h5>
-                            </div>
-                            <ul>
-                                <li>
-                                    <i className="fa-light fa-location-dot" />
-                                    <a
-                                        href="https://www.google.com/maps/@23.8223586,90.3661283,15z"
-                                        target="_blank"
-                                    >
-                                        Melbone st, Australia, Ny 12099
-                                    </a>
-                                </li>
-                                <li>
-                                    <i className="fas fa-envelope" />
-                                    <a href="mailto:solaredge@gmail.com">themepure@gmail.com</a>
-                                </li>
-                                <li>
-                                    <i className="fal fa-phone-alt" />
-                                    <a href="tel:+48555223224">+48 555 223 224</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div className="tpoffcanvas__input">
-                            <div className="tpoffcanvas__input-title">
-                                <h4>Get UPdate</h4>
-                            </div>
-                            <form action="#">
-                                <div className="p-relative">
-                                    <input type="text" placeholder="Enter mail" />
-                                    <button>
-                                        <i className="fas fa-paper-plane" />
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
-                        <div className="tpoffcanvas__social">
-                            <div className="social-icon">
-                                <a href="#">
-                                    <i className="fab fa-twitter" />
-                                </a>
-                                <a href="#">
-                                    <i className="fab fa-instagram" />
-                                </a>
-                                <a href="#">
-                                    <i className="fab fa-facebook-f" />
-                                </a>
-                                <a href="#">
-                                    <i className="fab fa-pinterest-p" />
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="body-overlay" />
-                {/* tp-offcanvus-area-end */}
                 <Header />
                 <div id="smooth-wrapper">
                     <div id="smooth-content">
@@ -221,7 +41,7 @@ function Services() {
                                                     </div>
                                                     <div className="breadcrumb__list">
                                                         <span>
-                                                            <a href="index.html">Home</a>
+                                                            <a onClick={() => { navigate('/'); reloadPage(); }}>Home</a>
                                                         </span>
                                                         <span className="dvdr">
                                                             <i className="fa-solid fa-angle-right" />
@@ -278,7 +98,6 @@ function Services() {
                                                             Tristique nisl nibh desing here this de tinci dunt our
                                                             designer here is
                                                         </p>
-                                                        <a href="service-details.html">Read More</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -339,7 +158,6 @@ function Services() {
                                                             Tristique nisl nibh desing here this de tinci dunt our
                                                             designer here is
                                                         </p>
-                                                        <a href="service-details.html">Read More</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -384,7 +202,6 @@ function Services() {
                                                             Tristique nisl nibh desing here this de tinci dunt our
                                                             designer here is
                                                         </p>
-                                                        <a href="service-details.html">Read More</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -433,7 +250,6 @@ function Services() {
                                                             Tristique nisl nibh desing here this de tinci dunt our
                                                             designer here is
                                                         </p>
-                                                        <a href="service-details.html">Read More</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -478,7 +294,6 @@ function Services() {
                                                             Tristique nisl nibh desing here this de tinci dunt our
                                                             designer here is
                                                         </p>
-                                                        <a href="service-details.html">Read More</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -523,7 +338,6 @@ function Services() {
                                                             Tristique nisl nibh desing here this de tinci dunt our
                                                             designer here is
                                                         </p>
-                                                        <a href="service-details.html">Read More</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -532,201 +346,6 @@ function Services() {
                                 </div>
                             </div>
                             {/* service area end */}
-                            {/* price area start */}
-                            <div className="tp-price-area pb-150">
-                                <div className="container">
-                                    <div className="row">
-                                        <div className="col-xl-12">
-                                            <div className="tp-price-title-box mb-60 text-center">
-                                                <span className="tp-section-subtitle tp-split-text tp-split-in-right">
-                                                    pricing section
-                                                </span>
-                                                <h3 className="tp-section-title tp-split-text tp-split-in-right">
-                                                    Designing the Future One <br /> Room at a Time
-                                                </h3>
-                                            </div>
-                                        </div>
-                                        <div
-                                            className="col-xl-4 col-lg-4 col-md-6 mb-50 wow tpfadeUp"
-                                            data-wow-duration=".9s"
-                                            data-wow-delay=".3s"
-                                        >
-                                            <div className="tp-price-item text-center">
-                                                <h4 className="tp-price-title pb-40">Stater Plan</h4>
-                                                <div className="tp-price-rate">
-                                                    <h6>
-                                                        <i>$19</i>/mo
-                                                    </h6>
-                                                </div>
-                                                <div className="tp-price-content">
-                                                    <div className="tp-price-list pb-40 text-start">
-                                                        <ul>
-                                                            <li>
-                                                                <i className="fa-sharp fa-solid fa-square-check" />
-                                                                Mistakes To Avoid
-                                                            </li>
-                                                            <li>
-                                                                <i className="fa-sharp fa-solid fa-square-check" />
-                                                                Your Startup
-                                                            </li>
-                                                            <li>
-                                                                <i className="fa-sharp fa-solid fa-square-check" />
-                                                                Knew About Fonts
-                                                            </li>
-                                                            <li>
-                                                                <i className="fa-sharp fa-solid fa-square-check" />
-                                                                Winning Metric for Your Startup
-                                                            </li>
-                                                            <li>
-                                                                <i className="fa-sharp fa-solid fa-square-check" />
-                                                                Your Startup
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div className="tp-price-button">
-                                                        <a className="tp-btn-theme w-100" href="contact.html">
-                                                            <span>
-                                                                Get Now
-                                                                <svg
-                                                                    width={17}
-                                                                    height={16}
-                                                                    viewBox="0 0 17 16"
-                                                                    fill="none"
-                                                                    xmlns="http://www.w3.org/2000/svg"
-                                                                >
-                                                                    <path
-                                                                        d="M9.25 4.71875L12.25 7.4375C12.4062 7.5625 12.4688 7.75 12.5 8C12.5 8.1875 12.4062 8.40625 12.25 8.5L9.25 11.2812C9.03125 11.5 8.71875 11.5312 8.4375 11.4375C8.15625 11.3125 8 11.0312 8 10.75V9H5.25C4.8125 9 4.5 8.6875 4.5 8.25V7.75C4.5 7.34375 4.8125 7 5.25 7H7.96875V5.25C7.96875 4.96875 8.1875 4.6875 8.4375 4.59375C8.6875 4.46875 9.03125 4.5 9.25 4.71875ZM8.5 0C12.9062 0 16.5 3.59375 16.5 8C16.5 12.4375 12.9062 16 8.5 16C4.0625 16 0.5 12.4375 0.5 8C0.5 3.59375 4.0625 0 8.5 0ZM8.5 14.5C12.0625 14.5 15 11.5938 15 8C15 4.4375 12.0625 1.5 8.5 1.5C4.90625 1.5 2 4.4375 2 8C2 11.5938 4.90625 14.5 8.5 14.5Z"
-                                                                        fill="currentcolor"
-                                                                    />
-                                                                </svg>
-                                                            </span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div
-                                            className="col-xl-4 col-lg-4 col-md-6 mb-50 wow tpfadeUp"
-                                            data-wow-duration=".9s"
-                                            data-wow-delay=".5s"
-                                        >
-                                            <div className="tp-price-item text-center">
-                                                <h4 className="tp-price-title pb-40">Basic Plan</h4>
-                                                <div className="tp-price-rate">
-                                                    <h6>
-                                                        <i>$29</i>/mo
-                                                    </h6>
-                                                </div>
-                                                <div className="tp-price-content">
-                                                    <div className="tp-price-list pb-40 text-start">
-                                                        <ul>
-                                                            <li>
-                                                                <i className="fa-sharp fa-solid fa-square-check" />
-                                                                Mistakes To Avoid
-                                                            </li>
-                                                            <li>
-                                                                <i className="fa-sharp fa-solid fa-square-check" />
-                                                                Your Startup
-                                                            </li>
-                                                            <li>
-                                                                <i className="fa-sharp fa-solid fa-square-check" />
-                                                                Knew About Fonts
-                                                            </li>
-                                                            <li>
-                                                                <i className="fa-sharp fa-solid fa-square-check" />
-                                                                Winning Metric for Your Startup
-                                                            </li>
-                                                            <li>
-                                                                <i className="fa-sharp fa-solid fa-square-check" />
-                                                                Your Startup
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div className="tp-price-button">
-                                                        <a className="tp-btn-theme w-100" href="contact.html">
-                                                            <span>
-                                                                Get Now
-                                                                <svg
-                                                                    width={17}
-                                                                    height={16}
-                                                                    viewBox="0 0 17 16"
-                                                                    fill="none"
-                                                                    xmlns="http://www.w3.org/2000/svg"
-                                                                >
-                                                                    <path
-                                                                        d="M9.25 4.71875L12.25 7.4375C12.4062 7.5625 12.4688 7.75 12.5 8C12.5 8.1875 12.4062 8.40625 12.25 8.5L9.25 11.2812C9.03125 11.5 8.71875 11.5312 8.4375 11.4375C8.15625 11.3125 8 11.0312 8 10.75V9H5.25C4.8125 9 4.5 8.6875 4.5 8.25V7.75C4.5 7.34375 4.8125 7 5.25 7H7.96875V5.25C7.96875 4.96875 8.1875 4.6875 8.4375 4.59375C8.6875 4.46875 9.03125 4.5 9.25 4.71875ZM8.5 0C12.9062 0 16.5 3.59375 16.5 8C16.5 12.4375 12.9062 16 8.5 16C4.0625 16 0.5 12.4375 0.5 8C0.5 3.59375 4.0625 0 8.5 0ZM8.5 14.5C12.0625 14.5 15 11.5938 15 8C15 4.4375 12.0625 1.5 8.5 1.5C4.90625 1.5 2 4.4375 2 8C2 11.5938 4.90625 14.5 8.5 14.5Z"
-                                                                        fill="currentcolor"
-                                                                    />
-                                                                </svg>
-                                                            </span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div
-                                            className="col-xl-4 col-lg-4 col-md-6 mb-50 wow tpfadeUp"
-                                            data-wow-duration=".9s"
-                                            data-wow-delay=".7s"
-                                        >
-                                            <div className="tp-price-item text-center">
-                                                <h4 className="tp-price-title pb-40">Premium Plan</h4>
-                                                <div className="tp-price-rate">
-                                                    <h6>
-                                                        <i>$89</i>/mo
-                                                    </h6>
-                                                </div>
-                                                <div className="tp-price-content">
-                                                    <div className="tp-price-list pb-40 text-start">
-                                                        <ul>
-                                                            <li>
-                                                                <i className="fa-sharp fa-solid fa-square-check" />
-                                                                Mistakes To Avoid
-                                                            </li>
-                                                            <li>
-                                                                <i className="fa-sharp fa-solid fa-square-check" />
-                                                                Your Startup
-                                                            </li>
-                                                            <li>
-                                                                <i className="fa-sharp fa-solid fa-square-check" />
-                                                                Knew About Fonts
-                                                            </li>
-                                                            <li>
-                                                                <i className="fa-sharp fa-solid fa-square-check" />
-                                                                Winning Metric for Your Startup
-                                                            </li>
-                                                            <li>
-                                                                <i className="fa-sharp fa-solid fa-square-check" />
-                                                                Your Startup
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div className="tp-price-button">
-                                                        <a className="tp-btn-theme w-100" href="contact.html">
-                                                            <span>
-                                                                Get Now
-                                                                <svg
-                                                                    width={17}
-                                                                    height={16}
-                                                                    viewBox="0 0 17 16"
-                                                                    fill="none"
-                                                                    xmlns="http://www.w3.org/2000/svg"
-                                                                >
-                                                                    <path
-                                                                        d="M9.25 4.71875L12.25 7.4375C12.4062 7.5625 12.4688 7.75 12.5 8C12.5 8.1875 12.4062 8.40625 12.25 8.5L9.25 11.2812C9.03125 11.5 8.71875 11.5312 8.4375 11.4375C8.15625 11.3125 8 11.0312 8 10.75V9H5.25C4.8125 9 4.5 8.6875 4.5 8.25V7.75C4.5 7.34375 4.8125 7 5.25 7H7.96875V5.25C7.96875 4.96875 8.1875 4.6875 8.4375 4.59375C8.6875 4.46875 9.03125 4.5 9.25 4.71875ZM8.5 0C12.9062 0 16.5 3.59375 16.5 8C16.5 12.4375 12.9062 16 8.5 16C4.0625 16 0.5 12.4375 0.5 8C0.5 3.59375 4.0625 0 8.5 0ZM8.5 14.5C12.0625 14.5 15 11.5938 15 8C15 4.4375 12.0625 1.5 8.5 1.5C4.90625 1.5 2 4.4375 2 8C2 11.5938 4.90625 14.5 8.5 14.5Z"
-                                                                        fill="currentcolor"
-                                                                    />
-                                                                </svg>
-                                                            </span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            {/* price area end */}
                         </main>
                         <Footer />
                     </div>

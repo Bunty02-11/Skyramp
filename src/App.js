@@ -5,6 +5,7 @@ import About from './Components/About/About'
 import Contact from './Components/Contact/Contact'
 import Services from './Components/Services/Services'
 import Project from './Components/Project/Project'
+import Projectdetails from './Components/Project/Projectdetails'
 
 function App() {
   useEffect(() => {
@@ -63,6 +64,7 @@ function App() {
           <Route exact path='/about' element={<About/>} />
           <Route exact path='/service' element={<Services/>} />
           <Route exact path='/project' element={<Project/>} />
+          <Route exact path='/projectdetails' element={<Projectdetails/>} />
           <Route exact path='/contact' element={<Contact/>} />
 
         </Routes>

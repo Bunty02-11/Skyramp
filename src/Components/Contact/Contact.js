@@ -1,194 +1,25 @@
 import React from 'react'
 import Header from '../Layout/Header'
 import Footer from '../Layout/Footer'
+import { useNavigate } from 'react-router-dom';
+import Topbutton from '../Topbutton/Topbutton';
 
 
 function Contact() {
+
+    const navigate = useNavigate();
+
+    const reloadPage = () => {
+        window.location.reload(0,0);
+    };
+
+
     return (
         <div>
             <>
                 {/* back to top start */}
-                <div className="back-to-top-wrapper">
-                    <button id="back_to_top" type="button" className="back-to-top-btn">
-                        <svg
-                            width={12}
-                            height={7}
-                            viewBox="0 0 12 7"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                d="M11 6L6 1L1 6"
-                                stroke="currentColor"
-                                strokeWidth="1.5"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                            />
-                        </svg>
-                    </button>
-                </div>
+                <Topbutton/>
                 {/* back to top end */}
-                {/* search popup start */}
-                <div className="search__popup d-none">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-xxl-12">
-                                <div className="search__wrapper">
-                                    <div className="search__top d-flex justify-content-between align-items-center">
-                                        <div className="search__logo">
-                                            <a href="index.html">
-                                                <img src="assets/img/logo/logo-white.png" alt="" />
-                                            </a>
-                                        </div>
-                                        <div className="search__close">
-                                            <button
-                                                type="button"
-                                                className="search__close-btn search-close-btn"
-                                            >
-                                                <svg
-                                                    width={18}
-                                                    height={18}
-                                                    viewBox="0 0 18 18"
-                                                    fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                >
-                                                    <path
-                                                        d="M17 1L1 17"
-                                                        stroke="currentColor"
-                                                        strokeWidth="1.5"
-                                                        strokeLinecap="round"
-                                                        strokeLinejoin="round"
-                                                    />
-                                                    <path
-                                                        d="M1 1L17 17"
-                                                        stroke="currentColor"
-                                                        strokeWidth="1.5"
-                                                        strokeLinecap="round"
-                                                        strokeLinejoin="round"
-                                                    />
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div className="search__form">
-                                        <form action="#">
-                                            <div className="search__input">
-                                                <input
-                                                    className="search-input-field"
-                                                    type="text"
-                                                    placeholder="Type here to search..."
-                                                />
-                                                <span className="search-focus-border" />
-                                                <button type="submit">
-                                                    <svg
-                                                        width={20}
-                                                        height={20}
-                                                        viewBox="0 0 20 20"
-                                                        fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                    >
-                                                        <path
-                                                            d="M9.55 18.1C14.272 18.1 18.1 14.272 18.1 9.55C18.1 4.82797 14.272 1 9.55 1C4.82797 1 1 4.82797 1 9.55C1 14.272 4.82797 18.1 9.55 18.1Z"
-                                                            stroke="currentColor"
-                                                            strokeWidth="1.5"
-                                                            strokeLinecap="round"
-                                                            strokeLinejoin="round"
-                                                        />
-                                                        <path
-                                                            d="M19.0002 19.0002L17.2002 17.2002"
-                                                            stroke="currentColor"
-                                                            strokeWidth="1.5"
-                                                            strokeLinecap="round"
-                                                            strokeLinejoin="round"
-                                                        />
-                                                    </svg>
-                                                </button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {/* search popup end */}
-                {/* tp-offcanvus-area-start */}
-                <div className="tpoffcanvas-area">
-                    <div className="tpoffcanvas">
-                        <div className="tpoffcanvas__close-btn">
-                            <button className="close-btn">
-                                <i className="fal fa-times" />
-                            </button>
-                        </div>
-                        <div className="tpoffcanvas__logo">
-                            <a href="index.html">
-                                <img src="assets/img/logo/logo-white.png" alt="" />
-                            </a>
-                        </div>
-                        <div className="tpoffcanvas__title">
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
-                                incidunt eaque ab cumque, porro maxime autem sed.
-                            </p>
-                        </div>
-                        <div className="tp-main-menu-mobile d-xl-none" />
-                        <div className="tpoffcanvas__contact-info">
-                            <div className="tpoffcanvas__contact-title">
-                                <h5>Contact us</h5>
-                            </div>
-                            <ul>
-                                <li>
-                                    <i className="fa-light fa-location-dot" />
-                                    <a
-                                        href="https://www.google.com/maps/@23.8223586,90.3661283,15z"
-                                        target="_blank"
-                                    >
-                                       1st Floor, PINNACLE BUSINESS PARK, Mahakali caves, Andheri East, Mumbai-400093
-                                    </a>
-                                </li>
-                                <li>
-                                    <i className="fas fa-envelope" />
-                                    <a href="mailto:solaredge@gmail.com">bholeinteriors@gmail.com</a>
-                                </li>
-                                <li>
-                                    <i className="fal fa-phone-alt" />
-                                    <a href="tel:+48555223224">9222499458 </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div className="tpoffcanvas__input">
-                            <div className="tpoffcanvas__input-title">
-                                <h4>Get Update</h4>
-                            </div>
-                            <form action="#">
-                                <div className="p-relative">
-                                    <input type="text" placeholder="Enter mail" />
-                                    <button>
-                                        <i className="fas fa-paper-plane" />
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
-                        <div className="tpoffcanvas__social">
-                            <div className="social-icon">
-                                <a href="#">
-                                    <i className="fab fa-twitter" />
-                                </a>
-                                <a href="#">
-                                    <i className="fab fa-instagram" />
-                                </a>
-                                <a href="#">
-                                    <i className="fab fa-facebook-f" />
-                                </a>
-                                <a href="#">
-                                    <i className="fab fa-pinterest-p" />
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="body-overlay" />
-                {/* tp-offcanvus-area-end */}
                 <Header/>
                 <div id="smooth-wrapper">
                     <div id="smooth-content">
@@ -210,7 +41,7 @@ function Contact() {
                                                     </div>
                                                     <div className="breadcrumb__list">
                                                         <span>
-                                                            <a href="index.html">Home</a>
+                                                            <a onClick={() => { navigate('/'); reloadPage(); }}>Home</a>
                                                         </span>
                                                         <span className="dvdr">
                                                             <i className="fa-solid fa-angle-right" />

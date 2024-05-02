@@ -5794,7 +5794,7 @@ body .ui-tooltip {
   }
 }
 .tp-header-style-5 .tp-header-menu > nav > ul > li > a {
-  color: var(--tp-common-black);
+  color: #a4a081;
   padding: 42px 0;
 }
 .tp-header-style-5 .tp-header-menu > nav > ul > li > a::after {

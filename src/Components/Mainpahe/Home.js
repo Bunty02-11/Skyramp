@@ -1,205 +1,26 @@
 import React from 'react'
 import Header from '../Layout/Header'
 import Footer from '../Layout/Footer'
+import { useNavigate } from 'react-router-dom';
+import Topbutton from '../Topbutton/Topbutton';
+
+
 function Home() {
+    const navigate = useNavigate();
+
+    const reloadPage = () => {
+        window.location.reload(0, 0);
+    };
+
+
     return (
         <div>
             <>
-                {/* <div id="loading">
-                    <div id="loading-center">
-                        <div id="loading-center-absolute">
-                            <div className="object" id="object_four" />
-                            <div className="object" id="object_three" />
-                            <div className="object" id="object_two" />
-                            <div className="object" id="object_one" />
-                        </div>
-                    </div>
-                </div> */}
-                {/* pre loader area end */}
                 {/* back to top start */}
-                <div className="back-to-top-wrapper">
-                    <button id="back_to_top" type="button" className="back-to-top-btn">
-                        <svg
-                            width={12}
-                            height={7}
-                            viewBox="0 0 12 7"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                d="M11 6L6 1L1 6"
-                                stroke="currentcolor"
-                                strokeWidth="1.5"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                            />
-                        </svg>
-                    </button>
-                </div>
+                <Topbutton />
                 {/* back to top end */}
-                {/* search popup start */}
-                <div className="search__popup d-none">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-xxl-12">
-                                <div className="search__wrapper">
-                                    <div className="search__top d-flex justify-content-between align-items-center">
-                                        <div className="search__logo">
-                                            <a href="index.html">
-                                                <img src="assets/img/logo/logo-white.png" alt="" />
-                                            </a>
-                                        </div>
-                                        <div className="search__close">
-                                            <button
-                                                type="button"
-                                                className="search__close-btn search-close-btn"
-                                            >
-                                                <svg
-                                                    width={18}
-                                                    height={18}
-                                                    viewBox="0 0 18 18"
-                                                    fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                >
-                                                    <path
-                                                        d="M17 1L1 17"
-                                                        stroke="currentcolor"
-                                                        strokeWidth="1.5"
-                                                        strokeLinecap="round"
-                                                        strokeLinejoin="round"
-                                                    />
-                                                    <path
-                                                        d="M1 1L17 17"
-                                                        stroke="currentcolor"
-                                                        strokeWidth="1.5"
-                                                        strokeLinecap="round"
-                                                        strokeLinejoin="round"
-                                                    />
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div className="search__form">
-                                        <form action="#">
-                                            <div className="search__input">
-                                                <input
-                                                    className="search-input-field"
-                                                    type="text"
-                                                    placeholder="Type here to search..."
-                                                />
-                                                <span className="search-focus-border" />
-                                                <button type="submit">
-                                                    <svg
-                                                        width={20}
-                                                        height={20}
-                                                        viewBox="0 0 20 20"
-                                                        fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                    >
-                                                        <path
-                                                            d="M9.55 18.1C14.272 18.1 18.1 14.272 18.1 9.55C18.1 4.82797 14.272 1 9.55 1C4.82797 1 1 4.82797 1 9.55C1 14.272 4.82797 18.1 9.55 18.1Z"
-                                                            stroke="currentcolor"
-                                                            strokeWidth="1.5"
-                                                            strokeLinecap="round"
-                                                            strokeLinejoin="round"
-                                                        />
-                                                        <path
-                                                            d="M19.0002 19.0002L17.2002 17.2002"
-                                                            stroke="currentcolor"
-                                                            strokeWidth="1.5"
-                                                            strokeLinecap="round"
-                                                            strokeLinejoin="round"
-                                                        />
-                                                    </svg>
-                                                </button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {/* search popup end */}
-                {/* tp-offcanvus-area-start */}
-                <div className="tpoffcanvas-area">
-                    <div className="tpoffcanvas">
-                        <div className="tpoffcanvas__close-btn">
-                            <button className="close-btn">
-                                <i className="fal fa-times" />
-                            </button>
-                        </div>
-                        <div className="tpoffcanvas__logo">
-                            <a href="index.html">
-                                <img src="assets/img/logo/logo-white.png" alt="" />
-                            </a>
-                        </div>
-                        <div className="tpoffcanvas__title">
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
-                                incidunt eaque ab cumque, porro maxime autem sed.
-                            </p>
-                        </div>
-                        <div className="tp-main-menu-mobile d-xl-none" />
-                        <div className="tpoffcanvas__contact-info">
-                            <div className="tpoffcanvas__contact-title">
-                                <h5>Contact us</h5>
-                            </div>
-                            <ul>
-                                <li>
-                                    <i className="fa-light fa-location-dot" />
-                                    <a
-                                        href="https://www.google.com/maps/@23.8223586,90.3661283,15z"
-                                        target="_blank"
-                                    >
-                                        Melbone st, Australia, Ny 12099
-                                    </a>
-                                </li>
-                                <li>
-                                    <i className="fas fa-envelope" />
-                                    <a href="mailto:solaredge@gmail.com">themepure@gmail.com</a>
-                                </li>
-                                <li>
-                                    <i className="fal fa-phone-alt" />
-                                    <a href="tel:+48555223224">+48 555 223 224</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div className="tpoffcanvas__input">
-                            <div className="tpoffcanvas__input-title">
-                                <h4>Get UPdate</h4>
-                            </div>
-                            <form action="#">
-                                <div className="p-relative">
-                                    <input type="text" placeholder="Enter mail" />
-                                    <button>
-                                        <i className="fas fa-paper-plane" />
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
-                        <div className="tpoffcanvas__social">
-                            <div className="social-icon">
-                                <a href="#">
-                                    <i className="fab fa-twitter" />
-                                </a>
-                                <a href="#">
-                                    <i className="fab fa-instagram" />
-                                </a>
-                                <a href="#">
-                                    <i className="fab fa-facebook-f" />
-                                </a>
-                                <a href="#">
-                                    <i className="fab fa-pinterest-p" />
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="body-overlay" />
-                {/* tp-offcanvus-area-end */}
                 {/* header area start */}
-                <Header/>
+                <Header />
                 {/* header area end */}
                 <div id="smooth-wrapper">
                     <div id="smooth-content">
@@ -291,12 +112,6 @@ function Home() {
                                                                             Aliquam eros justo, <br /> posuere loborti
                                                                             viverra laorematu our loborti viverra
                                                                         </p>
-                                                                        <a
-                                                                            className="tp-btn-black hover-2 theme-bg"
-                                                                            href="about-us.html"
-                                                                        >
-                                                                            <span>Read More</span>
-                                                                        </a>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -385,12 +200,6 @@ function Home() {
                                                                             Aliquam eros justo, <br /> posuere loborti
                                                                             viverra laorematu our loborti viverra
                                                                         </p>
-                                                                        <a
-                                                                            className="tp-btn-black hover-2 theme-bg"
-                                                                            href="about-us.html"
-                                                                        >
-                                                                            <span>Read More</span>
-                                                                        </a>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -479,12 +288,6 @@ function Home() {
                                                                             Aliquam eros justo, <br /> posuere loborti
                                                                             viverra laorematu our loborti viverra
                                                                         </p>
-                                                                        <a
-                                                                            className="tp-btn-black hover-2 theme-bg"
-                                                                            href="about-us.html"
-                                                                        >
-                                                                            <span>Read More</span>
-                                                                        </a>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -563,7 +366,7 @@ function Home() {
                                                         </span>
                                                     </div>
                                                     <h4 className="tp-service-2-title">
-                                                        <a href="service-details.html">
+                                                        <a>
                                                             Muse Interior Innovations
                                                         </a>
                                                     </h4>
@@ -579,7 +382,7 @@ function Home() {
                                                     <div className="tp-service-2-button">
                                                         <a
                                                             className="tp-btn-border-lg grey-border"
-                                                            href="service-details.html"
+                                                            onClick={() => { navigate('/service'); reloadPage(); }}
                                                         >
                                                             <span>Read More</span>
                                                         </a>
@@ -619,7 +422,7 @@ function Home() {
                                                         </span>
                                                     </div>
                                                     <h4 className="tp-service-2-title">
-                                                        <a href="service-details.html">
+                                                        <a>
                                                             Luxe Living <br /> Designs
                                                         </a>{" "}
                                                     </h4>
@@ -635,9 +438,9 @@ function Home() {
                                                     <div className="tp-service-2-button">
                                                         <a
                                                             className="tp-btn-border-lg grey-border"
-                                                            href="service-details.html"
+                                                            onClick={() => { navigate('/service'); reloadPage(); }}
                                                         >
-                                                            <span>Read More</span>
+                                                            <span >Read More</span>
                                                         </a>
                                                     </div>
                                                 </div>
@@ -679,7 +482,7 @@ function Home() {
                                                         </span>
                                                     </div>
                                                     <h4 className="tp-service-2-title">
-                                                        <a href="service-details.html">Dream Space Interiors</a>
+                                                        <a>Dream Space Interiors</a>
                                                     </h4>
                                                 </div>
                                                 <div className="tp-service-2-content">
@@ -693,7 +496,7 @@ function Home() {
                                                     <div className="tp-service-2-button">
                                                         <a
                                                             className="tp-btn-border-lg grey-border"
-                                                            href="service-details.html"
+                                                            onClick={() => { navigate('/service'); reloadPage(); }}
                                                         >
                                                             <span>Read More</span>
                                                         </a>
@@ -724,10 +527,12 @@ function Home() {
                                                 </div>
                                                 <div className="tp-about-text mb-25">
                                                     <p>
-                                                        Nulla vitae ex nunc. Morbi quis purus convallis, fermentum
-                                                        hio metus volutpat design sodales purus. Nunc quis an
-                                                        mauris et eros vulputate mattis Nulla vitae ex nunc. Morbi
-                                                        quis purus convallis, fermentum metus
+                                                        Welcome to SCY Ramp Architects and Interior Designers, founded by Shubham and Zeeshan.
+                                                        Our journey began with a shared passion for innovative design and a vision to create spaces that inspire and enrich lives.
+                                                        We believe in harmonizing form and function to craft experiences that resonate with the human spirit.
+                                                        Collaboration is at the heart of everything we do, ensuring that each project exceeds expectations.
+                                                        As we look ahead, we remain committed to innovation, integrity, and excellence, shaping the architectural landscape one project at a time.
+                                                        Join us on this exciting journey of design innovation and transformation
                                                     </p>
                                                 </div>
                                                 <div className="tp-about-list-wrap mb-35">
@@ -762,7 +567,7 @@ function Home() {
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <a className="tp-btn-black" href="about-us.html">
+                                                <a className="tp-btn-black" onClick={() => { navigate('/about'); reloadPage(); }} >
                                                     <span>Read More</span>
                                                 </a>
                                             </div>
@@ -825,7 +630,7 @@ function Home() {
                                         <div className="col-xl-12">
                                             <div className="tp-progress-title text-center mb-60">
                                                 <span className="tp-section-subtitle tp-split-text tp-split-in-right">
-                                                    Recent Blogs
+                                                    Recent Projects
                                                 </span>
                                                 <h3 className="tp-section-title text-white tp-split-text tp-split-in-right">
                                                     Create a Serene Oasis in Your <br /> Living Space
@@ -1003,14 +808,14 @@ function Home() {
                             {/* blog area start */}
                             <div className="tp-blog-area tp-blog-style-2 tp-blog-style-3 p-relative pb-150">
                                 <div className="tp-blog-big-text-3 d-none d-xxl-block">
-                                    <h6>Blogs</h6>
+                                    <h6>Projects</h6>
                                 </div>
                                 <div className="container">
                                     <div className="row">
                                         <div className="col-xl-12">
                                             <div className="tp-blog-2-title-box text-center mb-60">
                                                 <span className="tp-section-subtitle tp-split-text tp-split-in-right">
-                                                    Recent Blogs
+                                                    Recent Projects
                                                 </span>
                                                 <h3 className="tp-section-title tp-split-text tp-split-in-right">
                                                     {" "}
@@ -1027,7 +832,7 @@ function Home() {
                                                         <div className="swiper-slide">
                                                             <div className="tp-blog-item d-flex align-items-center">
                                                                 <div className="tp-blog-thumb">
-                                                                    <a href="blog-details.html">
+                                                                    <a>
                                                                         <img src="assets/img/blog/blog4-1.jpg" alt="" />
                                                                     </a>
                                                                 </div>
@@ -1065,12 +870,12 @@ function Home() {
                                                                         </span>
                                                                     </div>
                                                                     <h4 className="tp-blog-title mb-15">
-                                                                        <a href="blog-details.html">
+                                                                        <a>
                                                                             Imagination with Stunning Interior Possibilities
                                                                         </a>
                                                                     </h4>
                                                                     <div className="tp-blog-link">
-                                                                        <a className="tp-link" href="blog-details.html">
+                                                                        <a className="tp-link" onClick={() => { navigate('/project'); reloadPage(); }}>
                                                                             Read More
                                                                             <span className="bottom-line" />
                                                                         </a>
@@ -1081,7 +886,7 @@ function Home() {
                                                         <div className="swiper-slide">
                                                             <div className="tp-blog-item d-flex align-items-center">
                                                                 <div className="tp-blog-thumb">
-                                                                    <a href="blog-details.html">
+                                                                    <a>
                                                                         <img src="assets/img/blog/blog5-2.jpg" alt="" />
                                                                     </a>
                                                                 </div>
@@ -1119,12 +924,12 @@ function Home() {
                                                                         </span>
                                                                     </div>
                                                                     <h4 className="tp-blog-title mb-15">
-                                                                        <a href="blog-details.html">
+                                                                        <a>
                                                                             Living Space with Modern Interior Concepts
                                                                         </a>
                                                                     </h4>
                                                                     <div className="tp-blog-link">
-                                                                        <a className="tp-link" href="blog-details.html">
+                                                                        <a className="tp-link" onClick={() => { navigate('/project'); reloadPage(); }}>
                                                                             Read More
                                                                             <span className="bottom-line" />
                                                                         </a>
@@ -1135,7 +940,7 @@ function Home() {
                                                         <div className="swiper-slide">
                                                             <div className="tp-blog-item d-flex align-items-center">
                                                                 <div className="tp-blog-thumb">
-                                                                    <a href="blog-details.html">
+                                                                    <a>
                                                                         <img src="assets/img/blog/blog5-3.jpg" alt="" />
                                                                     </a>
                                                                 </div>
@@ -1173,12 +978,12 @@ function Home() {
                                                                         </span>
                                                                     </div>
                                                                     <h4 className="tp-blog-title mb-15">
-                                                                        <a href="blog-details.html">
+                                                                        <a>
                                                                             Dream Space with Skilled Interior Experts
                                                                         </a>
                                                                     </h4>
                                                                     <div className="tp-blog-link">
-                                                                        <a className="tp-link" href="blog-details.html">
+                                                                        <a className="tp-link" onClick={() => { navigate('/project'); reloadPage(); }}>
                                                                             Read More
                                                                             <span className="bottom-line" />
                                                                         </a>
@@ -1194,45 +999,8 @@ function Home() {
                                 </div>
                             </div>
                             {/* blog area end */}
-                            {/* newsletter area start */}
-                            {/* <div className="tp-newsletter-area theme-bg p-relative pt-70 pb-80">
-                                <div className="tp-newsletter-shape-1">
-                                    <img src="assets/img/newsletter/shape-1-1.png" alt="" />
-                                </div>
-                                <div className="container">
-                                    <div className="tp-newsletter-wrap">
-                                        <div className="row align-items-center">
-                                            <div className="col-xl-6 col-lg-6">
-                                                <div className="tp-newsletter-content">
-                                                    <h4 className="tp-newsletter-title mb-0 tp-split-text tp-split-in-right">
-                                                        Subscribe newsletter <br /> For Any Update
-                                                    </h4>
-                                                </div>
-                                            </div>
-                                            <div className="col-xl-6 col-lg-6">
-                                                <div className="tp-newsletter-input-wrap d-flex align-items-center justify-content-lg-end">
-                                                    <div className="tp-newsletter-input-box p-relative">
-                                                        <input type="email" placeholder="Enter Your Email" />
-                                                        <div className="tp-newsletter-input-icon">
-                                                            <span>
-                                                                <i className="fa-solid fa-envelope" />
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                    <div className="tp-newsletter-button text-md-end">
-                                                        <button className="tp-btn-black hover-2">
-                                                            <span>Suscribe Now</span>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> */}
-                            {/* newsletter area end */}
                         </main>
-                        <Footer/>
+                        <Footer />
                     </div>
                 </div>
             </>

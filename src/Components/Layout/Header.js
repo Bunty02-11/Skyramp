@@ -51,36 +51,36 @@ function Header() {
                         </div>
                         <div className="col-6 d-block d-xl-none" style={{ textAlign: 'right' }}>
                             <button onClick={toggleMenu} className="menu-toggle-button" style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: '18px', color: '#ffffff', position: 'relative', zIndex: '1100' }}>
-                            {menuOpen ? <FiX size={24} style={{ color: 'black', position: 'relative', zIndex: '1200' }} /> : <FiMenu size={24} style={{ color: 'black', position: 'relative', zIndex: '1200' }} />}
-                            </button>
+                            {menuOpen ? <FiX size={24} style={{ color: '#a6a182', position: 'relative', zIndex: '1200' }} /> : <FiMenu size={24} style={{ color: '#a6a182', position: 'relative', zIndex: '1200' }} />}
+                            </button> 
                         </div>
                     </div>
                 </div>
             </div>
             {/* Mobile Menu */}
             {menuOpen && (
-                <div style={{ position: 'fixed', top: '0', left: '0', width: '100%', height: '100%', backgroundColor: '#ffffff', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: '1000' }}>
-                    <div style={{ backgroundColor: '#ffffff', padding: '50px', borderRadius: '100px', boxShadow: '0 0 10px rgba(0, 0, 0, 0)', zIndex: '1100', textAlign: 'center' }}>
-                        <div className="tp-header-logo" style={{ position: 'absolute', top: '20px', left: '20px' }}>
+                <div style={{ position: 'fixed', top: '0', left: '0', width: '100%', height: '100%', backgroundColor: '#000000', display: 'Flex', alignItems: 'center', justifyContent: 'center', zIndex: '1000' }}>
+                    <div style={{ backgroundColor: '#000000', padding: '50px', borderRadius: '100px', boxShadow: '0 0 10px rgba(0, 0, 0, 0)', zIndex: '1100', textAlign: 'center' }}>
+                        <div className="tp-header-logo" style={{ position: 'absolute', top: '30px', left: '20px' }}>
                             <a onClick={() => { navigate('/'); reloadPage(); }} >
                                 <img src="assets/img/logo/logo-white.png" alt="" />
                             </a>
                         </div>
                         <ul style={{ listStyle: 'none', padding: '0', margin: '0' }}>
                             <li style={{ marginBottom: '40px' }}>
-                                <a onClick={() => { navigate('/'); reloadPage(); }} style={{ color: '#000000', textDecoration: 'none', fontSize: '32px' }}>Home</a>
+                                <a onClick={() => { navigate('/'); reloadPage(); }} style={{ color: '#a6a182', textDecoration: 'none', fontSize: '32px' }}>Home</a>
                             </li>
                             <li style={{ marginBottom: '40px' }}>
-                                <a onClick={() => { navigate('/about'); reloadPage(); }} style={{ color: '#000000', textDecoration: 'none', fontSize: '32px' }}>About Us</a>
+                                <a onClick={() => { navigate('/about'); reloadPage(); }} style={{ color: '#a6a182', textDecoration: 'none', fontSize: '32px' }}>About Us</a>
                             </li>
                             <li style={{ marginBottom: '40px' }}>
-                                <a onClick={() => { navigate('/service'); reloadPage(); }} style={{ color: '#000000', textDecoration: 'none', fontSize: '32px' }}>Services</a>
+                                <a onClick={() => { navigate('/service'); reloadPage(); }} style={{ color: '#a6a182', textDecoration: 'none', fontSize: '32px' }}>Services</a>
                             </li>
                             <li style={{ marginBottom: '40px' }}>
-                                <a onClick={() => { navigate('/project'); reloadPage(); }} style={{ color: '#000000', textDecoration: 'none', fontSize: '32px' }}>Projects</a>
+                                <a onClick={() => { navigate('/project'); reloadPage(); }} style={{ color: '#a6a182', textDecoration: 'none', fontSize: '32px' }}>Projects</a>
                             </li>
                             <li>
-                                <a onClick={() => { navigate('/contact'); reloadPage(); }} style={{ color: '#000000', textDecoration: 'none', fontSize: '32px' }}>Contact</a>
+                                <a onClick={() => { navigate('/contact'); reloadPage(); }} style={{ color: '#a6a182', textDecoration: 'none', fontSize: '32px' }}>Contact</a>
                             </li>
                         </ul>
                     </div>
